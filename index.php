@@ -7,7 +7,7 @@
         <title>Profile</title>
     </head>
     <body>
-        <?php require_once __DIR__ . 'profile.php';?>
+        <?php require_once  __DIR__ . '/profile.php';?>
         <script src="/js/profile.js"></script>
     </body>
 </html>
