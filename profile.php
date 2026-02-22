@@ -12,18 +12,20 @@
         <!-- ======== E-MAIL ======== -->
         <div class="profile__item">
             <label for="email" class="profile__label">E-mail</label>
-            <div class="profile__item-field">
+            <span>*</span>
+            <div class="profile__field">
                 <input type="email"
                     name="email"
                     id="email"
                     class="profile__input"
-                    aria-describedby="email-error"
+                    aria-describedby="emailError"
+                    required
                 >
                 <span class="profile__icon" aria-hidden="true">
                     <!-- svg -->
                 </span>
             </div>
-            <div class="profile__error"></div>
+            <div id="emailError" class="profile__error" aria-live="polite"></div>
         </div>
         <!-- ======================== -->
 
@@ -31,6 +33,7 @@
          <div class="profile__phones">
             <div class="profile__item profile__item--primary-phone">
                 <label for="primaryPhone" class="profile__label">Номер телефона</label>
+                <span>*</span>
                 <div class="profile__field">
                     <input type="tel"
                         id="primaryPhone"
@@ -67,14 +70,63 @@
 
     <fieldset class="profile__fieldset">
         <legend class="profile__legend">Персональные данные</legend>
+
         <!-- ======== ФАМИЛИЯ ======== -->
-         <div class="profile__item">
+        <div class="profile__item">
             <label for="lastName" class="profile__label">Фамилия</label>
-            <input type="text" name="lastName" id="lastName" class="profile__lastName">
+            <span>*</span>
+            <div class="profile__field">
+                <input type="text"
+                    name="lastName"
+                    id="lastName"
+                    class="profile__input"
+                    aria-describedby="lastNameError"
+                    required
+                >
                 <span class="profile__icon" aria-hidden="true">
                     <!-- svg -->
                 </span>
-            <div class="profile__error"></div>
+            </div>
+            <div id="lastNameError" class="profile__error" aria-live="polite"></div>
+        </div>
+        <!-- ======================== -->
+
+        <!-- ======== ИМЯ ======== -->
+        <div class="profile__item">
+            <label for="name" class="profile__label">Имя</label>
+            <span>*</span>
+            <div class="profile__field">
+                <input type="text"
+                    name="name"
+                    id="name"
+                    class="profile__input"
+                    aria-describedby="nameError"
+                    required
+                >
+                <span class="profile__icon" aria-hidden="true">
+                    <!-- svg -->
+                </span>
+            </div>
+            <div id="nameError" class="profile__error" aria-live="polite"></div>
+        </div>
+        <!-- ======================== -->
+
+        <!-- ======== ОТЧЕСТВО ======== -->
+        <div class="profile__item">
+            <label for="secondName" class="profile__label">Отчество</label>
+            <div class="profile__field">
+                <input type="text"
+                    name="secondName"
+                    id="secondName"
+                    class="profile__input"
+                    aria-describedby="secondNameError"
+                    required
+                >
+                <span class="profile__icon" aria-hidden="true">
+                    <!-- svg -->
+                </span>
+            </div>
+            <div id="secondNameError" class="profile__error" aria-live="polite"></div>
         </div>
         <!-- ======================== -->
      </fieldset>
