@@ -133,33 +133,35 @@
         <div class="profile__item">
             <label for="birthdate" class="profile__label">Дата Рождения</label>
             <span class="profile__field">
-                <select type="text"
-                    name="birthdateDay"
+                <select name="birthdateDay"
                     id="birthdateDay"
                     class="profile__input"
                 >
+                <option value="">День</option>
+
                 </select>
                 <span class="profile__icon" aria-hidden="true">
                     <!-- svg -->
                 </span>
             </span>
             <span class="profile__field">
-                <select type="text"
-                    name="birthdateMonth"
+                <select name="birthdateMonth"
                     id="birthdateMonth"
                     class="profile__input"
                 >
+                <option value="">Месяц</option>
                 </select>
                 <span class="profile__icon" aria-hidden="true">
                     <!-- svg -->
                 </span>
             </span>
             <span class="profile__field">
-                <select type="text"
-                    name="birthdateYear"
+                <select name="birthdateYear"
                     id="birthdateYear"
                     class="profile__input"
                 >
+                <option value="">Год</option>
+
                 </select>
                 <span class="profile__icon" aria-hidden="true">
                     <!-- svg -->
@@ -169,5 +171,29 @@
         </div>
         <!-- ======================== -->
 
-     </fieldset>
+        <!-- Пол -->
+        <div class="profile__item">
+            <label class="profile__label">
+                <input type="radio" id="male" name="gender" value="M">
+                Мужской
+            </label>
+            <span class="profile__icon" aria-hidden="true">
+                <!-- svg -->
+            </span>
+
+            <label class="profile__label">
+                <input type="radio" id="female" name="gender" value="F">
+                Женский
+            </label>
+            <span class="profile__icon" aria-hidden="true">
+                <!-- svg -->
+            </span>
+            <div id="genderError" class="profile__error" aria-live="polite"></div>
+        </div>
+
+    </fieldset>
+    <!-- Кнопка "Сохранить" -->
+    <button type="submit" id="saveBtn" name="saveBtn" class="g-button g-button--red cabinet-profile-form-saveBtn">
+    Сохранить изменения
+    </button>
 </form>

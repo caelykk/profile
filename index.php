@@ -8,6 +8,6 @@
     </head>
     <body>
         <?php require_once  __DIR__ . '/profile.php';?>
-        <script src="/js/profile.js"></script>
+        <script type="module" src="/js/profile.js"></script>
     </body>
 </html>
