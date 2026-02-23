@@ -120,7 +120,6 @@
                     id="secondName"
                     class="profile__input"
                     aria-describedby="secondNameError"
-                    required
                 >
                 <span class="profile__icon" aria-hidden="true">
                     <!-- svg -->
@@ -129,5 +128,46 @@
             <div id="secondNameError" class="profile__error" aria-live="polite"></div>
         </div>
         <!-- ======================== -->
+
+        <!-- ======== ДАТА РОЖДЕНИЯ ======== -->
+        <div class="profile__item">
+            <label for="birthdate" class="profile__label">Дата Рождения</label>
+            <span class="profile__field">
+                <select type="text"
+                    name="birthdateDay"
+                    id="birthdateDay"
+                    class="profile__input"
+                >
+                </select>
+                <span class="profile__icon" aria-hidden="true">
+                    <!-- svg -->
+                </span>
+            </span>
+            <span class="profile__field">
+                <select type="text"
+                    name="birthdateMonth"
+                    id="birthdateMonth"
+                    class="profile__input"
+                >
+                </select>
+                <span class="profile__icon" aria-hidden="true">
+                    <!-- svg -->
+                </span>
+            </span>
+            <span class="profile__field">
+                <select type="text"
+                    name="birthdateYear"
+                    id="birthdateYear"
+                    class="profile__input"
+                >
+                </select>
+                <span class="profile__icon" aria-hidden="true">
+                    <!-- svg -->
+                </span>
+            </span>
+            <div id="birthdateError" class="profile__error" aria-live="polite"></div>
+        </div>
+        <!-- ======================== -->
+
      </fieldset>
 </form>
