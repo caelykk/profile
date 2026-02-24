@@ -18,9 +18,9 @@ export function calendar () {
 
   // ===== ЭЛЕМЕНТЫ =====
   const s = {
-    day: document.getElementById('birthdateDay'),
-    month: document.getElementById('birthdateMonth'),
-    year: document.getElementById('birthdateYear')
+    day: document.getElementById('birthDay'),
+    month: document.getElementById('birthMonth'),
+    year: document.getElementById('birthYear')
   };
   const errorBox = document.getElementById('birthdateError');
   const form = document.querySelector('form');
@@ -88,7 +88,7 @@ export function calendar () {
     const filled = values.filter(v => v !== "").length;
 
     if (filled !== 0 && filled !== 3) {
-      e.preventDefault();
+      // e.preventDefault();
       errorBox.textContent = "Выберите дату полностью или оставьте поле пустым.";
     } else {
       errorBox.textContent = "";
