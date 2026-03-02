@@ -36,38 +36,38 @@
 
         <!-- ======== ТЕЛЕФОНЫ ======== -->
          <div class="profile__phones">
-            <div class="profile__item profile__item--primary-phone">
-                <label for="primaryPhone" class="profile__label">Номер телефона<span>*</span></label>
+            <div class="profile__item profile__item--phone">
+                <label for="phone" class="profile__label">Номер телефона<span>*</span></label>
 
                 <div class="profile__field">
                     <input type="tel"
-                        id="primaryPhone"
-                        name="primaryPhone"
+                        id="phone"
+                        name="phone"
                         class="profile__input"
-                        aria-describedby="primaryPhoneError"
+                        aria-describedby="phoneError"
                         required
                     >
                     <span class="profile__icon" aria-hidden="true">
                         <!-- SVG -->
                     </span>
                 </div>
-                <div id="primaryPhoneError" class="profile__error" aria-live="polite"></div>
+                <div id="phoneError" class="profile__error" aria-live="polite"></div>
             </div>
 
-            <div class="profile__item profile__item--secondary-phone">
-                <label for="secondaryPhone" class="profile__label">Дополнительный номер</label>
+            <div class="profile__item profile__item--second-phone">
+                <label for="secondPhone" class="profile__label">Дополнительный номер</label>
                 <div class="profile__field">
                     <input type="tel"
-                        id="secondaryPhone"
-                        name="secondaryPhone"
+                        id="secondPhone"
+                        name="secondPhone"
                         class="profile__input"
-                        aria-describedby="secondaryPhoneError"
+                        aria-describedby="secondPhoneError"
                     >
                     <span class="profile__icon" aria-hidden="true">
                         <!-- SVG -->
                     </span>
                 </div>
-                <div id="secondaryPhoneError" class="profile__error" aria-live="polite"></div>
+                <div id="secondPhoneError" class="profile__error" aria-live="polite"></div>
             </div>
         </div>
         <!-- ======================== -->

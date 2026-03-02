@@ -30,8 +30,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fieldNames = [
         'csrf',
         'email',
-        'primaryPhone',
-        'secondaryPhone',
+        'phone',
+        'secondPhone',
         'name',
         'lastName',
         'secondName',
@@ -43,24 +43,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fields = extractFields($_POST, $fieldNames);
     $ruPattern = '/^(?:\+7|7|8)\d{10,15}$/';
 
-    foreach($fields as $field => $value) {
-        switch ($field)
-        {
-            case 'email':
-                $err[$field] = validateEmail($field, true);
-                break;
-            case 'primaryPhone':
-                $err[$field] = validatePhone($field, true, $ruPattern);
-                break;
-        }
-    }
+    // print_r($fields);
 
-
-    // print_r(validatePhone($primaryPhone, true, $ruPattern));
-    // print_r(validateEmail($email, true));
-
-
-
+    print_r(validateEmail($fields['email'], true));
 
 
 
@@ -76,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo json_encode([
         'success' => 'true',
         'errors' => $err,
-
+        'data' => $fields,
     ]);
 exit;
 }
