@@ -1,13 +1,7 @@
 
+<?php require_once 'api/profile.php'; ?>
+
 <form action="/api/profile.php" method="post" id="profile" class="profile" novalidate>
-    <!-- <input
-        type="hidden"
-        name="csrf"
-        id="csrf"
-        value="<?= htmlspecialchars($csrf_token) ?>"
-    > -->
-
-
      <fieldset class="profile__fieldset">
         <legend class="profile__legend">Контакты</legend>
         <!-- ======== E-MAIL ======== -->
@@ -28,7 +22,7 @@
             </div>
             <div id="emailError" class="profile__error" aria-live="polite">
                 <?php
-                    print_r($err);
+                    //htmlspecialchars($errors['email']);
                 ?>
             </div>
         </div>
@@ -145,6 +139,7 @@
                         aria-describedby="birthdateError"
                     >
                     <option value="">День</option>
+                    <option value="1">1</option>
 
                     </select>
                     <span class="profile__icon" aria-hidden="true">
@@ -158,6 +153,7 @@
                         aria-describedby="birthdateError"
                     >
                     <option value="">Месяц</option>
+                    <option value="1">Январь</option>
                     </select>
                     <span class="profile__icon" aria-hidden="true">
                         <!-- svg -->
@@ -170,6 +166,7 @@
                         aria-describedby="birthdateError"
                     >
                     <option value="">Год</option>
+                    <option value="1992">1992</option>
 
                     </select>
                     <span class="profile__icon" aria-hidden="true">
