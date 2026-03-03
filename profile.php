@@ -1,7 +1,6 @@
 
-<?php require_once 'api/profile.php'; ?>
 
-<form action="/api/profile.php" method="post" id="profile" class="profile" novalidate>
+<form action="api/profile.php" method="post" id="profile" class="profile" novalidate>
      <fieldset class="profile__fieldset">
         <legend class="profile__legend">Контакты</legend>
         <!-- ======== E-MAIL ======== -->
@@ -21,9 +20,6 @@
                 </span>
             </div>
             <div id="emailError" class="profile__error" aria-live="polite">
-                <?php
-                    //htmlspecialchars($errors['email']);
-                ?>
             </div>
         </div>
         <!-- ======================== -->

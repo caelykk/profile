@@ -1,8 +1,6 @@
 <?php
 
 require_once __DIR__ . '/validator.php';
-require_once __DIR__ . '/../helpers/arrHelp.php';
-
 
 $success = false;
 
@@ -32,18 +30,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         'gender' => isValidGender($gender),
     ];
 
-    $success = empty(array_filter($errors));
+    $errors = array_filter($errors);
+    $success = empty($errors);
 
     $response = [
         'success' => $success,
         'errors' => $errors,
     ];
 
-
-
     if($success)
-        $result = mail('caelykkaty.m@gmail.com', '', json_encode($response, JSON_UNESCAPED_UNICODE));
-        var_dump($result);
+        mail('caelykkaty.m@gmail.com', '', json_encode($response, JSON_UNESCAPED_UNICODE));
+        // print_r($errors);
+
 
     echo json_encode($response, JSON_UNESCAPED_UNICODE);
 

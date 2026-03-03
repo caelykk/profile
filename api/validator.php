@@ -30,7 +30,7 @@ function isValidName($name, $required = false) {
 }
 
 function isValidDate($day, $month, $year, $required = false) {
-    $isFullDate = count(array_filter([$day, $month, $year]));
+    $isFullDate = ($day !== '') + ($month !== '') + ($year !== '');
 
     if($isFullDate === 0)
         return $required ? 'Это поле обязательно для заполнения' : '';
